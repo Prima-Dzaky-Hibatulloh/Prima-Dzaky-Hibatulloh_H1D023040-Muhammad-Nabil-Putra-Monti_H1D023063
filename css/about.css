@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: white;
+  font: black;
+  font-family: "Signika Negative", sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25); /* Shadow ke bawah */
+  position: fixed;
+  background-color: white;
+  z-index: 99;
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.login{
+  width: 120px;
+  height: 50px;
+  background-color: rgb(12, 150, 225);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px ;
+  
+}
+
+.login:hover{
+  background-color: #00b4e1;
+  color: #000000;
+  transition: 0.3s;
+}
+
+
+.hum-menu {
+  display: none;
+  color: #000000; /* Warna emas untuk teks menu */
+  font-size: 18px;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+
+.user-name {
+  position: relative; 
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.user-name h3 {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.user-name img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; 
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+
+.dropdown-menu {
+  display: block; 
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  width: 100%;
+  background-color: white; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 10;
+  opacity: 0; 
+  transform: translateY(-10px); 
+  pointer-events: none; 
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+  
+}
+.dropdown-menu h3{
+  font-family: "Mantinia", sans-serif;
+
+}
+
+.btn-profile{
+  padding: 10px 0px 10px 15px;
+
+}
+
+.dropdown-menu a {
+  text-decoration: none; 
+  display: block; 
+  width: 100%;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #333; 
+  transition: background-color 0.3s, color 0.3s; 
+  font-family: "Mantinia", sans-serif;
+}
+
+.dropdown-menu a:hover {
+  color: #ffffff;
+  background-color: #7e7b7b; 
+  border-radius: 8px;
+  text-shadow: 0 0 5px rgba(134, 134, 134, 0.8); 
+}
+
+.user-name:hover .dropdown-menu {
+  opacity: 1; 
+  transform: translateY(0);
+  pointer-events: auto; 
+}
+
+
+
+
+
+.navbar-left img {
+  width: 200px;
+}
+.navbar-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 60px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.container{
+  padding-top: 150px !important;  
+  width: 100%;
+}
+
+.main{
+  width: 70%;
+  margin: auto;
+  
+}
+.top{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.card-con{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.card{
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  transition: 0.5s;
+}
+
+.card:hover{
+  transform: scale(1.1);
+}
+
+.card img{
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.bottom{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin: 100px 0;
+
+}
+
+
+.maps{
+  width: 90%;
+}
+
+
+
+
+
+.footer {
+  background-color: #4b40af;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+.footer h3{
+  color: #ffc107;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-family: "Kanit", sans-serif;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #0056b3;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
