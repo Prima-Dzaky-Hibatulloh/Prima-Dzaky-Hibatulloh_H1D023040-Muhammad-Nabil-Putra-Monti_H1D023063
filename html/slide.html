@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="char.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(15, 198, 137);
+}
+
+.slide-con{
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.card-list .card-item {
+  color: rgb(255, 255, 255);
+  width: 300px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  backdrop-filter: blur(30px);
+  background-color: rgba(225, 225, 225, 0.5 );
+  border: 1px solid black;
+}
+
+.card-list .card-item .user-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 40px;
+  border: 3px solid white;
+  padding: 4px;
+}
+
+.card-list .card-item .user-profession {
+  font-size: 1.15 rem;
+  color: white;
+  font-weight: 500;
+  margin: 14px 0 40px;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="slide-con">
+    <div class="container swiper">
+        <div class="slider-wrapper">
+            <div class="card-list swiper-wrapper">
+
+                <div class="card-item swiper-slide">
+                    <img src="../img/elden-ring-character-warrior-full.webp" alt="" class="user-image">
+                    <h2 class="user-name">James</h2>
+                    <p class="user-profession">Sooftware defeloper</p>
+                </div>        
+                <div class="card-item swiper-slide">
+                    <img src="../img/elden-ring-character-wretch-full.webp" alt="" class="user-image">
+                    <h2 class="user-name">James</h2>
+                    <p class="user-profession">Sooftware defeloper</p>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="../img/elden-ring-character-samourai-full.png" alt="" class="user-image">
+                    <h2 class="user-name">James</h2>
+                    <p class="user-profession">Sooftware defeloper</p>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="../img/elden-ring-character-prophet-full.webp" alt="" class="user-image">
+                    <h2 class="user-name">James</h2>
+                    <p class="user-profession">Sooftware defeloper</p>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="../img/elden-ring-character-prisoner-full.webp" alt="" class="user-image">
+                    <h2 class="user-name">James</h2>
+                    <p class="user-profession">Sooftware defeloper</p>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="../img/elden-ring-character-hero-full-new.png" alt="" class="user-image">
+                    <h2 class="user-name">James</h2>
+                    <p class="user-profession">Sooftware defeloper</p>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="../img/elden-ring-character-confessor-full.webp" alt="" class="user-image">
+                    <h2 class="user-name">James</h2>
+                    <p class="user-profession">Sooftware defeloper</p>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="../img/elden-ring-character-bandit-full.webp" alt="" class="user-image">
+                    <h2 class="user-name">James</h2>
+                    <p class="user-profession">Sooftware defeloper</p>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="../img/elden-ring-character-astrologer-full.webp" alt="" class="user-image">
+                    <h2 class="user-name">James</h2>
+                    <p class="user-profession">Sooftware defeloper</p>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+   
+   const swiper = new Swiper('.slider-wrapper', {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 30, 
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints: { // Menggunakan 'breakpoints' (plural) bukan 'breakpoint'
+    0: {
+      slidesPerView: 1,
+    },
+    620: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3, // Memastikan tiga gambar tampil di layar besar
+    },
+  }
+});
+
+   
+</script>
+
+</body>
+</html>

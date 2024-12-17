@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitur Rotasi dengan left: -20%</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            transition: 0.5s ease-in-out;
+        }
+
+        .fitur-con {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .fitur-hidden {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 0.5s ease-in-out;
+            opacity: 0;
+            z-index: 0;
+        }
+
+        .fitur-hidden.visible {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+            z-index: 2;
+        }
+
+        .fitur-hidden.left {
+            left: -20%;
+            opacity: 0.7;
+            transform: translateY(-50%) scale(0.8);
+            z-index: 1;
+        }
+
+        .fitur-hidden.right {
+            left: 120%;
+            opacity: 0.7;
+            transform: translateY(-50%) scale(0.8);
+            z-index: 1;
+        }
+
+        .fitur {
+            text-align: center;
+        }
+
+        .fitur img {
+            width: 100px;
+            height: auto;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="fitur-con">
+        <div class="fitur-hidden left">
+            <div class="fitur">
+                <img src="../image/chat-dokter.webp" alt="">
+                <p>Artikel Kesehatan</p>
+            </div>
+        </div>
+        <div class="fitur-hidden visible">
+            <div class="fitur">
+                <img src="../image/homelab.webp" alt="">
+                <p>Home Lab & Vaksinasi</p>
+            </div>
+        </div>
+        <div class="fitur-hidden right">
+            <div class="fitur">
+                <img src="../image/toko_kes.webp" alt="">
+                <p>Toko Kesehatan</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+    </div>
+
+    <script>
+        const fiturItems = document.querySelectorAll('.fitur-hidden');
+        const posisi = ["left", "visible", "right"];
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+
+        function updateClasses() {
+            fiturItems.forEach((item, index) => {
+                item.className = `fitur-hidden ${posisi[index]}`;
+            });
+        }
+
+        nextBtn.addEventListener('click', () => {
+            const temp = posisi.shift();
+            posisi.push(temp);
+            updateClasses();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            const temp = posisi.pop();
+            posisi.unshift(temp);
+            updateClasses();
+        });
+
+        updateClasses();
+    </script>
+</body>
+</html>
